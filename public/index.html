@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Netflix Clone</title>
+    <link rel="icon" href="./img/n-Icon.png">
+    <!-- font-awesome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css">    
+    <!-- fonts  -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <!-- css -->
+    <link rel="stylesheet" href="./css/style.css">
+
+    <!-- update the version number as needed -->
+    <script defer src="/__/firebase/8.4.3/firebase-app.js"></script>
+    <!-- include only the Firebase features as you need -->
+    <script defer src="/__/firebase/8.4.3/firebase-auth.js"></script>
+    <script defer src="/__/firebase/8.4.3/firebase-database.js"></script>
+    <script defer src="/__/firebase/8.4.3/firebase-firestore.js"></script>
+    <script defer src="/__/firebase/8.4.3/firebase-functions.js"></script>
+    <script defer src="/__/firebase/8.4.3/firebase-messaging.js"></script>
+    <script defer src="/__/firebase/8.4.3/firebase-storage.js"></script>
+    <script defer src="/__/firebase/8.4.3/firebase-analytics.js"></script>
+    <script defer src="/__/firebase/8.4.3/firebase-remote-config.js"></script>
+    <script defer src="/__/firebase/8.4.3/firebase-performance.js"></script>
+    <!-- 
+      initialize the SDK after all desired features are loaded, set useEmulator to false
+      to avoid connecting the SDK to running emulators.
+    -->
+    <script defer src="/__/firebase/init.js?useEmulator=true"></script>
+
+  </head>
+  <body>
+      <div class="main">
+        <section class="landing">
+          <div class="opacity">
+            <nav>
+              <div class="nav-center">
+                <div class="logo">
+                  <img src="./img/logo.png" alt="">
+                </div>
+  
+                <div class="sign-in-button">
+                  <button onclick="window.location.href='./login.html'">Sign In</button>
+                </div>
+              </div>
+            </nav>
+  
+            <div class="hero-container">
+              <div class="hero-content">
+                <h3>Unlimited movies, TV shows and more.</h3>
+                <p>Watch anywhere. Cancel anytime.</p>
+                <p>Ready to watch? Enter your email to create or restart your membership.</p>
+  
+                  <form class="input-wrapper" action="regform.html">
+                  <input type="text" id="txt" placeholder="Email" required>
+                  <button onclick="passValues()" class="btnstarted">Get Started 
+                    <i class="fas fa-chevron-right"></i>
+                  </button>
+                </form>
+              </div>
+            </div>
+          </div>         
+        </section>
+
+        <section class="enjoy">
+            <div class="enjoy-container">
+              <div class="enjoy-content">
+                <h1>Enjoy on your TV.</h1>
+                <h3>Watch on Smart TVs, Playstation, Xbox, Chromecast, Apple TV, Blu-ray players, and more.
+                </h3>
+              </div>
+
+              <div class="tv-image-container">
+                <div class="tv-image">
+                  <img src="./img/tv.png" alt="">
+                  <video autoplay="yes" playsinline="" muted="" loop="true" >
+                    <source src="./img/updated-video-on-tv.m4v" type="video/mp4">
+                  </video>
+                </div>
+              </div>
+
+           
+            </div>
+        </section>
+
+
+        <section class="download">
+          <div class="download-container">
+          
+             <div class="phone">
+               <img src="./img/3.jpg" alt="">
+             </div>
+
+             <div class="download-content">
+                <h1>Download your shows to watch offline.</h1>
+                <h3>Save your favorites easily and always have something to watch.</h3>
+             </div>
+          </div>
+      </section>
+
+      <section class="enjoy">
+        <div class="enjoy-container">
+          <div class="enjoy-content">
+            <h1>Watch everywhere.</h1>
+            <h3>Stream unlimited movies and TV shows on your phone, tablet, laptop, and TV without paying more.
+            </h3>
+          </div>
+
+          <div class="tv-image-container">
+            <div class="tv-image">
+              <img src="./img/4.png" alt="">
+              <video class="abdal" autoplay="yes" playsinline="" muted="" loop="true" >
+                <source src="./img/updated-video-on-tv-2.m4v" type="video/mp4">
+              </video>
+            </div>
+          </div>
+        </div>
+    </section>
+
+    <section class="download">
+      <div class="download-container">
+              <div class="phone">
+           <img src="./img/updated-kids.png" alt="">
+         </div>
+         <div class="download-content">
+            <h1>Create profiles for kids.</h1>
+            <h3>Send kids on adventures with their favorite characters in a space made just for them—free with your membership.</h3>
+         </div>
+      </div>
+  </section>
+
+  <section class="question">
+      <div class="question-container">
+        <h1>Frequently Asked Questions</h1>
+        <div class="dropdown-container">
+          <div class="dropdown">
+            <h3>What is Netflix?</h3>
+            <span>+</span>
+          </div>
+          <div class="dropdown">
+            <h3>How much does Netflix cost?</h3>
+            <span>+</span>
+          </div>
+          <div class="dropdown">
+            <h3>Where can I watch?</h3>
+            <span>+</span>
+          </div>
+          <div class="dropdown">
+            <h3>How do I cancel?</h3>
+            <span>+</span>
+          </div>
+          <div class="dropdown">
+            <h3>What can I watch on Netflix?</h3>
+            <span>+</span>
+          </div>
+          <div class="dropdown">
+            <h3>Is Netflix good for kids?</h3>
+            <span>+</span>
+          </div>
+       
+        </div>
+        <div class="membership-container">
+          <p>Ready to watch? Enter your email to create or restart your membership.</p>
+          <form class="input-wrapper" action="regform.html">
+            <input type="text" id="txt2" placeholder="Email" required>
+            <button onclick="passValues2()" class="btnstarted">Get Started 
+              <i class="fas fa-chevron-right"></i>
+            </button>
+          </form>
+        </div>
+     
+     
+      </div>
+  </section>
+      </div>
+
+   
+
+   <script>
+     function passValues(){
+       var email = document.getElementById('txt').value
+       localStorage.setItem("textValue", email);
+       return false
+
+     }
+
+     function passValues2(){
+      var email2 = document.getElementById('txt2').value
+       localStorage.setItem("textValue", email2);
+       return false
+     }
+
+   </script>
+  </body>
+</html>

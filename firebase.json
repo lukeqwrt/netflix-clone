@@ -1,0 +1,25 @@
+{
+  "hosting": {
+    "public": "public",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ],
+    "rewrites": [
+      {
+        "source": "**",
+        "destination": "/index.html"
+      },
+      {
+        "source": "regform",
+        "destination": "./regfrom.html"
+      },
+      {
+        "source": "/login",
+        "destination": "./login.html"
+      }
+
+    ]
+  }
+}

@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Netflix Clone</title>
+    <link rel="icon" href="./img/n-Icon.png">
+    <!-- app pic -->
+    <link rel="apple-touch-icon" sizes="128x128" href="./img/n-Icon.png">
+
+    <!-- font-awesome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css">    
+    <!-- fonts  -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <!-- css -->
+    <link rel="stylesheet" href="./css/login.css">
+
+    <!-- update the version number as needed -->
+    <script defer src="/__/firebase/8.4.3/firebase-app.js"></script>
+    <!-- include only the Firebase features as you need -->
+    <script defer src="/__/firebase/8.4.3/firebase-auth.js"></script>
+    <script defer src="/__/firebase/8.4.3/firebase-database.js"></script>
+    <script defer src="/__/firebase/8.4.3/firebase-firestore.js"></script>
+    <script defer src="/__/firebase/8.4.3/firebase-functions.js"></script>
+    <script defer src="/__/firebase/8.4.3/firebase-messaging.js"></script>
+    <script defer src="/__/firebase/8.4.3/firebase-storage.js"></script>
+    <script defer src="/__/firebase/8.4.3/firebase-analytics.js"></script>
+    <script defer src="/__/firebase/8.4.3/firebase-remote-config.js"></script>
+    <script defer src="/__/firebase/8.4.3/firebase-performance.js"></script>
+    <!-- 
+      initialize the SDK after all desired features are loaded, set useEmulator to false
+      to avoid connecting the SDK to running emulators.
+    -->
+    <script defer src="/__/firebase/init.js?useEmulator=true"></script>
+
+    <!-- cdn  slider-->
+    <link
+    rel="stylesheet"
+    href="https://unpkg.com/swiper/swiper-bundle.min.css"
+  />
+  </head>
+  <body>
+    
+    <div class="loaderr">
+      <div class="loader-center">
+        <img src="./img/spinner.png" alt="lerror">
+        <h3>Loading</h3>
+      </div>
+  </div>
+
+      <div class="main">
+        <section id="landing" class="landing" >
+          <div class="opacity">
+            <nav>
+              <div class="nav-center">
+                <div class="logo" >
+                  <img src="./img/logo.png" alt="" onclick="window.location.href = './index.html'">
+                </div>
+  
+                <div class="sign-in-button">
+                  
+                </div>
+              </div>
+            </nav>
+  
+            <div id="hero-container" class="hero-container" >
+              <div class="hero-form">
+                <h3>Sign In</h3>
+                <input id="email" type="text" placeholder="Email or phone mumber">
+                <input id="password" type="password" placeholder="Password">
+                <div class="login-button">
+                  <button id="signingIn">Sign In</button>
+                </div>
+
+                <div class="remember-wrapper">
+                  <div class="checkbox-wrapper">
+                    <input type="checkbox" id="checkbox" name="checkbox" value="checkbox">
+                  <label for="checkbox"> Remember Me</label>
+                  </div>
+
+                  <a href="">Need help?</a>
+                </div>
+
+                <p>New to Netflix? <a href="">Sign up Now</a></p>
+                <p>This page is protected by Google reCAPTCHA to ensure you're not a bot. <span>Learn more.</span></p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+
+        <section id="signIn-container" class="signIn-container" >
+            <div class="navigation">
+              <div class="nav-center">
+                <div class="logo2">
+                  <img src="./img/logo.png" alt="">
+
+                  <p>Series</p>
+                  <p>Films</p>
+                </div>
+
+                  <div class="search-wrapper">
+                    <img src="./img/search2.png" alt="">
+                    <input type="text">
+
+                    <div class="user-wrapper">
+                        <img src="./img/user.png" alt="">
+                      <i id="downIcon" class="fas fa-caret-down"></i>
+                    </div>
+                  </div>
+
+                  <div class="drop-down">
+                    <div class="dropdown-user-wrapper">
+                      <img src="./img/user.png" alt="">
+                      <div class="here" id="here">lukeadrian9@gmail.com</div>
+                    </div>
+                    <button id="signout">Sign out</button>
+                   
+                  </div>
+              </div>
+            </div>
+
+            <div class="header">
+                <div class="login-content">
+                  <h3>Watch Money Hays Now</h3>
+                  <p>Money Heist (Spanish: La casa de papel, "The House of Paper") is a Spanish heist crime drama television series created by Álex Pina. The series traces two long-prepared heists led by the Professor (Álvaro Morte), one on the Royal Mint of Spain, and one on the Bank of Spain.</p>
+                  <div class="content-btn">
+                    <button>Play</button>
+                  </div>
+                </div>
+            </div>
+
+            <div class="movies-container">
+              <div class="swiper-container mySwiper">
+                <h4>Children</h4>
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <img src="./img/children/child5.jpg" alt="">
+                  </div>
+                  <div class="swiper-slide">
+                    <img src="./img/children/child2.jpg" alt="">
+                  </div>
+                  <div class="swiper-slide">
+                    <img src="./img/children/child3.jpg" alt="">
+                  </div>
+                  <div class="swiper-slide">
+                    <img src="./img/children/child4.jpg" alt="">
+                  </div>
+                  <div class="swiper-slide">
+                    <img src="./img/children/child1.jpg" alt="">
+                  </div>
+           
+                </div>
+              </div>
+              <div class="swiper-container mySwiper">
+                <h4>Thriller</h4>
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <img src="./img/Thirller/thriller1.jpg" alt="">
+                  </div>
+                  <div class="swiper-slide">
+                    <img src="./img/Thirller/thriller2.jpg" alt="">
+                  </div>
+                  <div class="swiper-slide">
+                    <img src="./img/Thirller/thriller3.jpg" alt="">
+                  </div>
+                  <div class="swiper-slide">
+                    <img src="./img/Thirller/thriller4.jpg" alt="">
+                  </div>
+                  <div class="swiper-slide">
+                    <img src="./img/Thirller/thriller5.jpg" alt="">
+                  </div>
+           
+                </div>
+              </div>
+              <div class="swiper-container mySwiper">
+                <h4>Suspense</h4>
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <img src="./img/suspense/sus1.jpg" alt="">
+                  </div>
+                  <div class="swiper-slide">
+                    <img src="./img/suspense/sus2.jpg" alt="">
+                  </div>
+                  <div class="swiper-slide">
+                    <img src="./img/suspense/sus3.jpg" alt="">
+                  </div>
+                  <div class="swiper-slide">
+                    <img src="./img/suspense/sus4.jpg" alt="">
+                  </div>
+                  <div class="swiper-slide">
+                    <img src="./img/suspense/sus5.jpg" alt="">
+                  </div>
+           
+                </div>
+              </div>
+              <div class="swiper-container mySwiper">
+                <h4>Romance</h4>
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <img src="./img/romance/rom1.jpg" alt="">
+                  </div>
+                  <div class="swiper-slide">
+                    <img src="./img/romance/rom2.jpg" alt="">
+                  </div>
+                  <div class="swiper-slide">
+                    <img src="./img/romance/rom3.jpg" alt="">
+                  </div>
+                  <div class="swiper-slide">
+                    <img src="./img/romance/rom4.jpg" alt="">
+                  </div>
+                  <div class="swiper-slide">
+                    <img src="./img/romance/rom5.jpg" alt="">
+                  </div>
+           
+                </div>
+              </div>
+              <div class="swiper-container mySwiper">
+                <h4>drama</h4>
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <img src="./img/drama/drama1.jpg" alt="">
+                  </div>
+                  <div class="swiper-slide">
+                    <img src="./img/drama/drama2.jpg" alt="">
+                  </div>
+                  <div class="swiper-slide">
+                    <img src="./img/drama/drama3.jpg" alt="">
+                  </div>
+                  <div class="swiper-slide">
+                    <img src="./img/drama/drama4.jpg" alt="">
+                  </div>
+                  <div class="swiper-slide">
+                    <img src="./img/drama/drama5.jpg" alt="">
+                  </div>
+           
+                </div>
+              </div>
+
+           
+                <!-- <div class="documentary">
+                  <h4>Romance</h4>
+                  <div class="movie">
+                    <div class="movie-wrapper">
+                      <div class="movie-image">
+                          <img src="./img/romance/rom1.jpg" alt="">
+                      </div>
+                    </div>
+                    <div class="movie-wrapper">
+                      <div class="movie-image">
+                        <img src="./img/romance/rom2.jpg" alt="">
+                      </div>
+                    </div>
+                    <div class="movie-wrapper">
+                      <div class="movie-image">
+                        <img src="./img/romance/rom3.jpg" alt="">
+                      </div>
+                    </div>
+                    <div class="movie-wrapper">
+                      <div class="movie-image">
+                        <img src="./img/romance/rom4.jpg" alt="">
+                      </div>
+                    </div>
+                    <div class="movie-wrapper">
+                      <div class="movie-image">
+                        <img src="./img/romance/rom5.jpg" alt="">
+                      </div>
+                    </div>
+                  </div>
+              </div> -->
+            
+            </div>
+
+
+    
+        </section>
+      </div>
+
+
+   
+
+      <script src="./login.js"></script>
+ <!-- Swiper JS -->
+ <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+ <!-- Initialize Swiper -->
+ <script>
+
+var swiper = new Swiper(".mySwiper", {
+  slidesPerView: 5,
+     spaceBetween: 5,
+     freeMode: true,
+     pagination: {
+       el: ".swiper-pagination",
+       clickable: true,
+     },
+     breakpoints: {
+      800:{
+        slidesPerView: 5,
+      },
+        // when window width is <= 700px
+        200: {
+            slidesPerView: 2,
+        },
+      },
+   });
+
+
+ </script>
+  </body>
+</html>

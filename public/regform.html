@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Netflix Clone</title>
+    <link rel="icon" href="./img/n-Icon.png">
+    <!-- font-awesome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css">    
+    <!-- fonts  -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <!-- css -->
+    <link rel="stylesheet" href="./css/createacc.css">
+
+    <!-- update the version number as needed -->
+    <script defer src="/__/firebase/8.4.3/firebase-app.js"></script>
+    <!-- include only the Firebase features as you need -->
+    <script defer src="/__/firebase/8.4.3/firebase-auth.js"></script>
+    <script defer src="/__/firebase/8.4.3/firebase-database.js"></script>
+    <script defer src="/__/firebase/8.4.3/firebase-firestore.js"></script>
+    <script defer src="/__/firebase/8.4.3/firebase-functions.js"></script>
+    <script defer src="/__/firebase/8.4.3/firebase-messaging.js"></script>
+    <script defer src="/__/firebase/8.4.3/firebase-storage.js"></script>
+    <script defer src="/__/firebase/8.4.3/firebase-analytics.js"></script>
+    <script defer src="/__/firebase/8.4.3/firebase-remote-config.js"></script>
+    <script defer src="/__/firebase/8.4.3/firebase-performance.js"></script>
+    <!-- 
+      initialize the SDK after all desired features are loaded, set useEmulator to false
+      to avoid connecting the SDK to running emulators.
+    -->
+    <script defer src="/__/firebase/init.js?useEmulator=true"></script>
+
+  </head>
+  <body>
+      <div class="main">
+        <section class="landing">
+            <nav>
+              <div class="nav-center">
+                <div class="logo">
+                  <img src="./img/logo.png" alt="" onclick="window.location.href = './index.html'">
+                </div>
+  
+                <div class="sign-in-button">
+                  <button onclick="window.location.href = './login.html'">Sign In</button>
+                </div>
+              </div>
+            </nav>
+  
+            <div id="container" class="wrapper-main">
+              <div class="login-container">
+                <h3>Create a password to start your membership.</h3>
+                <h5>Just a few more steps and you're done! We hate paperwork, too.</h5>
+                <input type="email" id="mail" name="mail" placeholder="Email">
+                <input type="password" id="password" name="password" placeholder="Add a password">
+                <div class="checkbox-wrapper">
+                  <input type="checkbox" id="checkbox" name="checkbox" value="checkbox">
+                  <label for="checkbox"> Please do not email me Netflix special others</label>
+                </div>
+         
+                <button id="signUp">Continue</button>
+              </div>  
+            </div>
+        
+ 
+         
+        </section>
+
+      </div>
+
+   
+      <script src="app.js"></script>
+  </body>
+</html>
+

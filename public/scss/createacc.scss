@@ -1,0 +1,148 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+html{
+    font-family: 'Open Sans', sans-serif;
+}
+.main{
+    height: 100vh;
+    .landing{
+        height: 100%;
+        .wrapper-main{
+            height: calc(100% - 90px);
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            @media screen and (max-width: 600px){
+                // padding: 10px 40px;
+            }
+            .login-container{
+                @media screen and (max-width: 600px){
+                    // padding: 10px 40px;
+                    margin: 60px 30px;
+                }
+                display: flex;
+                flex-direction: column;
+                max-width: 430px;
+                width: 100%;
+                margin: 0 auto;
+                margin-top: 60px;
+                // flex
+
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: flex-start;
+                h3{
+                    color:#333;
+                    font-size: 22px;
+                    font-family: 'Open Sans', sans-serif;
+                    font-weight: 700;
+                    max-width: 350px;
+                    width: 100%;
+                }
+                h5{
+                    color: #333;
+                    margin-top: 8px;
+                    font-size: 19px;
+                    font-weight: 500;
+                    max-width: 350px;
+                    width: 100%;
+                }
+                input:nth-child(3),
+                input:nth-child(4){
+                    width: 100%;
+                    height: 55px;
+                    outline: none;
+                    border: 1px solid rgb(150, 150, 150);
+                    margin-top: 10px;
+                }
+                .checkbox-wrapper{
+                    margin-top: 10px;
+                    display: flex;
+                    align-items: center;
+                    input{
+                        height: 25px;
+                        width: 25px;
+                        outline: none;
+                        border: 1px solid black;
+                    }
+                    label{
+                        padding-left: 10px;
+                    }
+                }
+
+                button{
+                    cursor: pointer;
+                    margin-top: 28px;
+                    width: 100%;
+                    height: 50px;
+                    background: #e50914;
+                    color: white;
+                    outline: none;
+                    border: none;
+                    font-family: 'Open Sans', sans-serif;
+                    font-weight: 600;
+                    font-size: 16px;
+                }
+            }
+        }
+
+
+        nav{
+            border-bottom: 1px solid rgb(224, 224, 224);
+            height: 90px;
+            width: 100%;
+            .nav-center{
+                @media screen and (max-width: 600px){
+                    // margin: 0 10px;
+                }
+                max-width: 1250px;
+                width: 100%;
+                margin: 0 auto;
+                height: 100%;
+                // flex
+                display: flex;
+                align-items: center;
+                .logo{
+                    flex: 1;
+                    height: auto;
+
+                    img{
+                        @media screen and (max-width: 600px){
+                            width: 100px;
+                            margin-left: 9px;
+                        }
+                        height: auto;
+                         width: 170px;
+                    }
+                }
+
+                .sign-in-button{
+                    button{
+                        @media screen and (max-width: 600px){
+                            width: 70px;
+                            margin-right: 9px;
+                            font-size: 17px;
+                        }
+                        background: none;
+                        cursor: pointer;
+                        height:35px;
+                        width: 90px;
+                        border-radius:5px;
+                        color: #333; 
+                        font-weight: 800;    
+                        border: none;
+                        outline: none;
+                        font-family: 'Roboto', sans-serif;
+                        font-size: 20px;
+                        font-weight: 500;
+                        text-align: right;
+                    }
+                }
+            }
+        }
+    }
+}
